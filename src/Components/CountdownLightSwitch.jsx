@@ -41,8 +41,7 @@ function CountdownLightSwitch() {
       }, 1000);
     } else if (isRunning && seconds === 0) {
       setIsRunning(false);
-      setMessage("Time's Up!");
-
+      setMessage("Switching Theme Automatically");
       setTheme(theme === "dark" ? "light" : "dark");
     }
 
