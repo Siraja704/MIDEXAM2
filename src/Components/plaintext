@@ -1,0 +1,19 @@
+
+
+
+Theme Toggle:
+• Use React state to manage the current theme (dark or light).
+• When the toggle is clicked, update the theme by adding or removing a CSS class (for example, toggling a light class on the main container or document
+
+
+
+Countdown Timer & Progress Bar:
+- Implement a 30-second countdown timer that updates every second.
+• Display a progress bar that visually indicates the elapsed time.
+When the timer reaches zero, display a "Time's Up!" message and automatically toggle the theme.
+• Control Buttons:
+• Provide a "Start Timer" button to initiate the countdown.
+• Provide a "Reset Timer" button that restores the initial state.
+• User Experience:
+Ensure smooth transitions and animations (for theme changes, progress bar updates, etc.).
+• The UI should be same as provided.

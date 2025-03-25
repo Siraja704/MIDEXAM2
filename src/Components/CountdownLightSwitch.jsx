@@ -1,22 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import "./CountdownLightSwitch.css";
 
 function CountdownLightSwitch() {
+  const [theme, setTheme] = useState("dark");
+
+  // Apply theme class to body element when theme changes
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.add("light");
+    } else {
+      document.body.classList.remove("light");
+    }
+  }, [theme]);
+
+  function ChangeHandler(event) {
+    // Toggle between light and dark theme
+    setTheme(theme === "dark" ? "light" : "dark");
+  }
+
   return (
     <div>
       <div className="container">
         <div className="header">
           <h1>Countdown & Light Switch</h1>
-          <div classNameName="toggle-container">
-            <label classNameName="toggle-switch">
-              <input type="checkbox" id="themeToggle" />
-              <span classNameName="slider"></span>
+          <div className="toggle-container">
+            <label className="toggle-switch">
+              <input
+                onChange={ChangeHandler}
+                type="checkbox"
+                checked={theme === "light"}
+                className={theme}
+              />
+              <span className="slider"></span>
             </label>
-            <span>Light Mode</span>
+            <span>{theme === "light" ? "Dark Mode" : "Light Mode"}</span>
           </div>
         </div>
 
-        <div classNameName="timer-section">
+        <div className="timer-section">
           <div className="progress-bar">
             <div className="progress" id="progress"></div>
           </div>
